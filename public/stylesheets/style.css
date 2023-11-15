@@ -1,0 +1,58 @@
+body {
+  height: 100vh;
+  background-color: #eeebd3;
+  color: #143f3e;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+main {
+  height: 100vh;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul li {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #143f3e;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+/* Personal Recipe Page */
+#btn-add-recipe {
+  background-color: #255957;
+  color: #EEEBD3;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#recipes-container {
+  width: 100%;
+  height: 60%;
+  background-color: #6f8790;
+  border-radius: 25px;
+}
