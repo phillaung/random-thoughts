@@ -1,6 +1,4 @@
 <%- include('../partials/header.ejs') %>
-
-<main class="container-fluid p-2">
     <form class="new-recipe" action="/recipes/create" method="POST">
         <div class="form-group">
             <input required type="text" name="name" class="form-control px-2 py-1" placeholder="recipe name">
@@ -26,6 +24,5 @@
         <hr/>
         <button type="submit" class="btn btn-success">Add</button>
     </form>
-</main>
 
 <%- include('../partials/footer.ejs') %>

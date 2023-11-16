@@ -2,12 +2,10 @@ var express = require('express');
 var router = express.Router();
 var ensureLoggedIn = require('../config/ensureLoggedIn')
 var passport = require('passport')
+var indexCtrl = require('../controllers/index');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    if(req.isAuthenticated()) console.log('cool')
-  res.render('index', { title: 'Express' });
-});
+router.get('/', indexCtrl.index);
 
 router.get(
     '/auth/google',
