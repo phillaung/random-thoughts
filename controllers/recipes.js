@@ -10,8 +10,17 @@ function newRecipe(req, res) {
 }
 
 async function create(req, res) {
+    req.body.user = req.user._id
+    req.body.ingredients = req.body.ingredients.split(',')
+    req.body.instructions = req.body.instructions.split('..');
     console.log(req.body)
-    res.redirect('/recipes')
+    try {
+        await Recipe.create(req.body)
+        res.redirect('/recipes');
+    } catch (err) {
+        console.log(err)
+        res.redirect('/recipes/new');
+    }
 }
 
 module.exports = {

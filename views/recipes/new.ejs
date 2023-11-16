@@ -1,21 +1,27 @@
 <%- include('../partials/header.ejs') %>
 
-<main class="container-fluid">
+<main class="container-fluid p-2">
     <form class="new-recipe" action="/recipes/create" method="POST">
         <div class="form-group">
-            <input required type="text" name="name" class="form-control" placeholder="Recipe Name">
+            <input required type="text" name="name" class="form-control px-2 py-1" placeholder="recipe name">
             <label>Name</label>
         </div>
-        <!-- <hr/> -->
         <div class="form-group">
-            <input required type="text" name="description" class="form-control" placeholder="Description">
+            <input required type="text" name="description" class="form-control px-2 py-1" placeholder="description">
             <label>Description</label>
         </div>        
-        <!-- <hr/> -->
+        <hr/>
         <div class="form-group current">
-            <input required type="text" name="ingredients" class="form-control" placeholder="Ingredients">
+            <label>Ingredients</label>
+            <input required type="text" name="ingredients" class="form-control px-2 py-1" placeholder="ingredients">
+            <small>Seperate the ingredients by a comma ','.</small>
         </div>
-        <label>Ingredients</label>
+        <hr/>
+        <div class="form-group current">
+            <label>Instructions</label>
+            <input required type="text" name="instructions" class="form-control px-2 py-1" placeholder="steps">
+            <small>Put '..' after each step. e.g.Pour a cup of water in a pot..Boil the water..</small>
+        </div>
         
         <hr/>
         <button type="submit" class="btn btn-success">Add</button>

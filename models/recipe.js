@@ -7,6 +7,7 @@ const recipeSchema = new Schema(
         description: String,
         pic: String,
         ingredients: [String],
+        instructions: [String],
         user: {
             type: Schema.Types.ObjectId,
             ref: 'User'
@@ -14,10 +15,6 @@ const recipeSchema = new Schema(
         likes: [{
             type: Schema.Types.ObjectId,
             ref: 'User'
-        }],
-        categories: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Category'
         }]
     },
     {
