@@ -4,5 +4,7 @@ var ensureLoggedIn = require('../config/ensureLoggedIn');
 var recipesCtrl = require('../controllers/recipes')
 
 router.get('/', ensureLoggedIn, recipesCtrl.index);
+router.get('/new', ensureLoggedIn, recipesCtrl.new);
+router.post('/create', ensureLoggedIn, recipesCtrl.create)
 
 module.exports = router;

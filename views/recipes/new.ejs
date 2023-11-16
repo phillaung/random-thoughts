@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<main class="container-fluid">
+    <form class="new-recipe" action="/recipes/create" method="POST">
+        <div class="form-group">
+            <input required type="text" name="name" class="form-control" placeholder="Recipe Name">
+            <label>Name</label>
+        </div>
+        <!-- <hr/> -->
+        <div class="form-group">
+            <input required type="text" name="description" class="form-control" placeholder="Description">
+            <label>Description</label>
+        </div>        
+        <!-- <hr/> -->
+        <div class="form-group current">
+            <input required type="text" name="ingredients" class="form-control" placeholder="Ingredients">
+        </div>
+        <label>Ingredients</label>
+        
+        <hr/>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</main>
+
+<%- include('../partials/footer.ejs') %>
