@@ -2,16 +2,18 @@
 
 <h3>Recent</h3>
 <% if (recipes.length) { %>
+<div class="row">
     <% recipes.forEach(function (rec) { %>
     <div class="col-6 col-sm-4 col-md-3">
         <div class="card">
-            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/11/10/05/24/add-2935429_640.png">
+            <img class="card-img-top" src="https://picsum.photos/seed/<%= rec._id %>/200/200">
             <p class="card-title p-1 m-1"><%= rec.name %></p>
             <img src="<%= rec.user.avatar %>" class="img-home-avatar m-1">
             <a href="/recipes/<%= rec._id %>" class="stretched-link"></a>
         </div>
     </div>
     <% }) %>
+</div>
 <% } %>
 
 <%- include('./partials/footer.ejs') %>

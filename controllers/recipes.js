@@ -23,8 +23,14 @@ async function create(req, res) {
     }
 }
 
+async function show(req, res) {
+    const recipe = await Recipe.findById(req.params.id).populate('user')
+    res.render('recipes/show', { title: recipe.name, recipe })
+}
+
 module.exports = {
     index,
     new: newRecipe,
     create,
+    show
 };
